@@ -1,8 +1,24 @@
-body {
+/* Reset default body margin */
+/* Reset body and html to full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Main content grows to push footer down */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    text-align: center;
+    flex: 1; /* ensures footer sticks to bottom */
+}
+
+/* Form styling */
 .form-container {
     width: 400px;
     margin: 50px auto;
@@ -42,17 +58,17 @@ input {
     background-color: #303f9f;
 }
 
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
-
+/* Footer pinned at bottom */
 footer {
-    margin-top: 50px;
+    margin: 0;
     padding: 20px;
     background-color: #3f51b5;
     color: white;
     text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 .social-icons {
@@ -70,7 +86,10 @@ footer {
 .social-icons img:hover {
     transform: scale(1.2);
 }
+
+/* Navbar */
 .navbar {
+    margin: 0; /* ensures no gap at top */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +100,7 @@ footer {
 
 .navbar h2 {
     margin: 0;
+    padding: 0;
 }
 
 .navbar .nav-right a {
@@ -94,12 +114,7 @@ footer {
     text-decoration: underline;
 }
 
-.container {
-    width: 90%;
-    margin: 30px auto;
-    text-align: center;
-}
-
+/* Card grid */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -141,18 +156,285 @@ footer {
     font-size: 14px;
     color: #555;
     margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Club detail container */
+.club-container {
+    width: 80%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.club-container h2 {
+    color: #3f51b5;
+    margin-bottom: 10px;
+}
+
+.club-container p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.club-container form {
+    display: inline-block;
+    margin: 10px 5px 20px 0;
+}
+
+.club-container button {
+    background-color: #3f51b5;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.club-container button:hover {
+    background-color: #303f9f;
+}
+
+.club-container h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.club-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.club-container ul li {
+    background: #f5f5f5;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Messages */
+.messages {
+    margin: 15px 0;
+}
+
+.messages p {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.messages p.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.messages p.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.messages p.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+.features, .how-it-works, .testimonials {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.features h2, .how-it-works h2, .testimonials h2 {
+    color: #3f51b5;
+    margin-bottom: 15px;
+}
+
+.how-it-works ol {
+    padding-left: 20px;
+    color: #555;
+}
+
+.testimonials blockquote {
+    background: #f5f5f5;
+    padding: 15px;
+    border-left: 5px solid #3f51b5;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+/* Card style for homepage sections */
+.card {
+    background: #fff;
+    border: 2px solid #3f51b5; /* colored outline */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* Explore clubs highlights */
+.club-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.highlight {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.highlight:hover {
+    transform: scale(1.05);
+    background: #e8eaf6;
+}
+#formMessage p {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#formMessage p.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#formMessage p.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 20px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Feedback card */
+.feedback-card {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.feedback-card.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback-card.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Contact intro */
+.contact-intro {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Contact form */
+form {
+    max-width: 500px;       /* shorter width */
+    margin: 30px auto;
+    padding: 10px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    max-width: 400px;       /* keep fields shorter */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
 }
 
 .btn {
     background-color: #3f51b5;
     color: white;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border: none;
     border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #303f9f;
 }
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #3f51b5;
+    color: #3f51b5;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background-color: #3f51b5;
+    color: white;
+}
+

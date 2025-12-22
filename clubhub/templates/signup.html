@@ -6,6 +6,19 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </nav>
+    
     <div class="form-container">
         <h2>Create Your Account</h2>
         <form method="post">
@@ -30,5 +43,14 @@
             <button type="submit" class="btn">Register</button>
         </form>
     </div>
+    <footer>
+        <p>Connect with us:</p>
+        <div class="social-icons">
+            <a href="#"><img src="{% static 'svg/instagram.svg' %}" alt="Instagram"></a>
+            <a href="#"><img src="{% static 'svg/twitter.svg' %}" alt="Twitter"></a>
+            <a href="#"><img src="{% static 'svg/tiktok.svg' %}" alt="TikTok"></a>
+        </div>
+        <p>&copy; {% now "Y" %} ClubHub. All rights reserved.</p>
+    </footer>
 </body>
 </html>

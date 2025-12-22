@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'signup' %}">Sign Up</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </nav>
+
+    <!-- Contact Form -->
+    <div class="form-container">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="Amina Ali" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="amina@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Feedback messages -->
+        <div id="formMessage"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with us:</p>
+        <div class="social-icons">
+            <a href="#"><img src="{% static 'svg/instagram.svg' %}" alt="Instagram"></a>
+            <a href="#"><img src="{% static 'svg/twitter.svg' %}" alt="Twitter"></a>
+            <a href="#"><img src="{% static 'svg/tiktok.svg' %}" alt="TikTok"></a>
+        </div>
+        <p>&copy; {% now "Y" %} ClubHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Validation -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // prevent actual submission
+
+            const fullName = document.getElementById("full_name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const formMessage = document.getElementById("formMessage");
+
+            if (!fullName || !email || !subject || !message) {
+                formMessage.innerHTML = "<p class='error'>❌ Please fill in all fields before sending.</p>";
+            } else {
+                formMessage.innerHTML = "<p class='success'>✅ Your message has been sent successfully!</p>";
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

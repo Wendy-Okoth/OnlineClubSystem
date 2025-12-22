@@ -29,4 +29,6 @@ urlpatterns = [
     path("clubs/<int:club_id>/", views.club_detail, name="club_detail"),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("recent-clubs/", views.recent_clubs, name="recent_clubs"),
+    path("about/", views.about, name="about"),
+    path("contact/", views.contact, name="contact"),
 ]

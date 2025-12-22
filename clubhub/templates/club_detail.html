@@ -1,27 +1,50 @@
-<h2>{{ club.name }}</h2>
-<p>{{ club.description }}</p>
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>{{ club.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="club-container">
+        <h2>{{ club.name }}</h2>
+        <p>{{ club.description }}</p>
 
-{% if user.is_authenticated %}
-    {% if user in club.members.all %}
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit" name="leave">Leave Club</button>
-        </form>
-    {% else %}
-        <form method="post">
-            {% csrf_token %}
-            <button type="submit" name="join">Join Club</button>
-        </form>
-    {% endif %}
+        <!-- Feedback messages -->
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <p class="{{ message.tags }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
 
-    <h3>Members:</h3>
-    <ul>
-        {% for member in club.members.all %}
-            <li>{{ member.username }}</li>
-        {% empty %}
-            <li>No members yet.</li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p><a href="{% url 'login' %}">Login</a> to join this club.</p>
-{% endif %}
+        {% if user.is_authenticated %}
+            {% if user in club.members.all %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="leave">Leave Club</button>
+                </form>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="join">Join Club</button>
+                </form>
+            {% endif %}
+
+            <h3>Members:</h3>
+            <ul>
+                {% for member in club.members.all %}
+                    <li>{{ member.username }}</li>
+                {% empty %}
+                    <li>No members yet.</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p><a href="{% url 'login' %}">Login</a> to join this club.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+

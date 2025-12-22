@@ -2,10 +2,11 @@
 <!doctype html>
 <html>
 <head>
-    <title>Login</title>
+    <title>About ClubHub</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
             <h2>ClubHub</h2>
@@ -14,31 +15,31 @@
             <a href="{% url 'homepage' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'contact' %}">Contact Us</a>
-            <a href="{% url 'signup' %}">Sign Up</a>
             <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Sign up</a>
         </div>
     </nav>
-    
-    <div class="form-container">
-        <h2>Login</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
 
-            <div class="form-group">
-                {{ form.username.label_tag }}
-                {{ form.username }}
-            </div>
+    <div class="container">
+        <h1>About ClubHub</h1>
+        <p>Learn more about our journey and mission.</p>
 
-            <div class="form-group">
-                {{ form.password.label_tag }}
-                {{ form.password }}
-            </div>
+        <!-- Card: Creation details -->
+        <section class="card">
+            <h2>Our Story</h2>
+            <p><strong>Created:</strong> July 2025</p>
+            <p><strong>Estimated Members:</strong> 500+</p>
+        </section>
 
-            <button type="submit" class="btn">Login</button>
-        </form>
-        <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a></p>
+        <!-- Card: Location and mission -->
+        <section class="card">
+            <h2>Where We Are</h2>
+            <p><strong>Location:</strong> Westlands Nairobi, Kenya</p>
+            <p><strong>Mission:</strong> To connect book and movie lovers, foster discussions, and build lasting friendships.</p>
+        </section>
     </div>
+
+    <!-- Footer -->
     <footer>
         <p>Connect with us:</p>
         <div class="social-icons">
@@ -50,4 +51,3 @@
     </footer>
 </body>
 </html>
-

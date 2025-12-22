@@ -1,8 +1,34 @@
-<h2>Recently Joined Clubs</h2>
-<ul>
-    {% for club in clubs %}
-        <li>{{ club.name }} - {{ club.genre }}</li>
-    {% empty %}
-        <li>You haven’t joined any clubs yet.</li>
-    {% endfor %}
-</ul>
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>Recently Joined Clubs</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Recently Joined Clubs</h2>
+
+        {% if clubs %}
+            <div class="card-grid">
+                {% for club in clubs %}
+                    <div class="card">
+                        <!-- Club logo -->
+                        <img src="{% static 'logos/' %}{{ club.name|lower }}.png" alt="{{ club.name }} logo" class="card-logo">
+
+                        <!-- Club info -->
+                        <div class="card-content">
+                            <h3>{{ club.name }}</h3>
+                            <p>Genre: {{ club.genre }}</p>
+                            <a href="{% url 'club_detail' club.id %}" class="btn">View</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>You haven’t joined any clubs yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+

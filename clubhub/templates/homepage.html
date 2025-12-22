@@ -6,12 +6,53 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'homepage' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'signup' %}">Sign up</a>
+        </div>
+    </nav>
+
     <div class="container">
         <h1>Welcome to ClubHub</h1>
         <p>Join book and movie clubs, share reviews, and connect with members.</p>
 
-        <a href="{% url 'login' %}" class="btn">Login</a>
-        <a href="{% url 'signup' %}" class="btn">Sign up</a>
+        <!-- Single Get Started button -->
+        <a href="{% url 'signup' %}" class="btn">Get Started</a>
+
+        <!-- Extra sections to lengthen the page -->
+        <section class="card features">
+            <h2>Why ClubHub?</h2>
+            <p>We bring together readers and movie lovers from all walks of life. Whether you’re into romance, sci-fi, thrillers, or comedy, there’s a club for you.</p>
+        </section>
+
+        <section class="card how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Sign up and create your profile.</li>
+                <li>Browse clubs by genre and interest.</li>
+                <li>Join up to 8 clubs and start engaging.</li>
+                <li>Share reviews, attend discussions, and make new friends.</li>
+            </ol>
+        </section>
+
+        <!-- New section instead of testimonials -->
+        <section class="card explore">
+            <h2>Explore Popular Clubs</h2>
+            <div class="club-highlights">
+                <div class="highlight">📚 Romance Book Club</div>
+                <div class="highlight">🎬 Sci-Fi Movie Club</div>
+                <div class="highlight">😂 Comedy Book Club</div>
+                <div class="highlight">🔍 Mystery Movie Club</div>
+            </div>
+        </section>
     </div>
 
     <footer>
@@ -25,5 +66,7 @@
     </footer>
 </body>
 </html>
+
+
 
 
