@@ -1,0 +1,9 @@
+<h2>All Clubs</h2>
+<ul>
+    {% for club in clubs %}
+        <li>
+            <strong>{{ club.name }}</strong> - {{ club.description }}
+            <a href="{% url 'club_detail' club.id %}">View</a>
+        </li>
+    {% endfor %}
+</ul>
