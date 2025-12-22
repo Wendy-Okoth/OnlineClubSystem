@@ -2,16 +2,25 @@
 <!doctype html>
 <html>
 <head>
-    <title>ClubHub</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to ClubHub</h1>
-        <p>Join book and movie clubs, share reviews, and connect with members.</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'club_list' %}">Browse Clubs</a>
+            <a href="{% url 'recent_clubs' %}">Recently Joined</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </nav>
 
-        <a href="{% url 'login' %}" class="btn">Login</a>
-        <a href="{% url 'signup' %}" class="btn">Sign up</a>
+    <div class="container">
+        <h1>Welcome, {{ user.username }}!</h1>
+        <p>This is your dashboard. Use the navbar above to explore.</p>
     </div>
 
     <footer>
@@ -25,5 +34,4 @@
     </footer>
 </body>
 </html>
-
 

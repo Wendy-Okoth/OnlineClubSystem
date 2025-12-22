@@ -1,6 +1,8 @@
 
 from django.conf import settings
 from django.db import models
+from django.db import models 
+from django.contrib.auth.models import User
 
 class Genre(models.Model):
     MEDIA_CHOICES = [
@@ -19,6 +21,8 @@ class Club(models.Model):
     media_type = models.CharField(max_length=10, choices=Genre.MEDIA_CHOICES)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     description = models.TextField(blank=True)
+
+    members = models.ManyToManyField(User, related_name="clubs", blank=True)
 
     def __str__(self):
         return self.name

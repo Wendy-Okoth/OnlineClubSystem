@@ -1,0 +1,8 @@
+<h2>Recently Joined Clubs</h2>
+<ul>
+    {% for club in clubs %}
+        <li>{{ club.name }} - {{ club.genre }}</li>
+    {% empty %}
+        <li>You haven’t joined any clubs yet.</li>
+    {% endfor %}
+</ul>

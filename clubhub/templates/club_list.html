@@ -1,9 +1,30 @@
-<h2>All Clubs</h2>
-<ul>
-    {% for club in clubs %}
-        <li>
-            <strong>{{ club.name }}</strong> - {{ club.description }}
-            <a href="{% url 'club_detail' club.id %}">View</a>
-        </li>
-    {% endfor %}
-</ul>
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <title>All Clubs</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>All Clubs</h2>
+        <div class="card-grid">
+            {% for club in clubs %}
+                <div class="card">
+                    <!-- Club logo -->
+                    <img src="{% static 'logos/' %}{{ club.name|lower }}.png" alt="{{ club.name }} logo" class="card-logo">
+
+                    <!-- Club info -->
+                    <div class="card-content">
+                        <h3>{{ club.name }}</h3>
+                        <p>{{ club.description }}</p>
+                        <a href="{% url 'club_detail' club.id %}" class="btn">View</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+
+
