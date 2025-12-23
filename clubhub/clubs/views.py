@@ -58,3 +58,11 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def events(request):
+    return render(request, "events.html")
+
+@login_required
+def reviews(request):
+    # later you can query Review objects
+    return render(request, "reviews.html")

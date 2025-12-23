@@ -9,9 +9,10 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
-            <h2>ClubHub</h2>
+            <h2>StoryHub</h2>
         </div>
         <div class="nav-right">
+            <a href="{% url 'dashboard' %}">Home</a>
             <a href="{% url 'club_list' %}">Browse Clubs</a>
             <a href="{% url 'recent_clubs' %}">Recently Joined</a>
             <a href="{% url 'logout' %}">Logout</a>
@@ -21,6 +22,36 @@
     <div class="container">
         <h1>Welcome, {{ user.username }}!</h1>
         <p>This is your dashboard. Use the navbar above to explore.</p>
+
+        <!-- New content cards -->
+        <div class="card-grid">
+            <!-- Upcoming Events -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Upcoming Events</h3>
+                    <p>Stay tuned for book readings, movie nights, and club meetups happening soon.</p>
+                    <a href="{% url 'events' %}" class="btn">View Events</a>
+                </div>
+            </div>
+
+            <!-- Your Clubs -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Your Clubs</h3>
+                    <p>See the clubs you’ve joined and manage your memberships.</p>
+                    <a href="{% url 'recent_clubs' %}" class="btn">Go to My Clubs</a>
+                </div>
+            </div>
+
+            <!-- Latest Reviews -->
+            <div class="card">
+                <div class="card-content">
+                    <h3>Latest Reviews</h3>
+                    <p>Check out what other members are saying about books and movies.</p>
+                    <a href="{% url 'reviews' %}" class="btn">Read Reviews</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -34,4 +65,5 @@
     </footer>
 </body>
 </html>
+
 

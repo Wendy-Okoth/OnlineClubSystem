@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+     <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'dashboard' %}">Home</a>
+            <a href="{% url 'club_list' %}">Browse Clubs</a>
+            <a href="{% url 'recent_clubs' %}">Recently Joined</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </nav>
+
     <div class="container">
         <h2>All Clubs</h2>
         <div class="card-grid">
@@ -24,6 +36,15 @@
             {% endfor %}
         </div>
     </div>
+    <footer>
+        <p>Connect with us:</p>
+        <div class="social-icons">
+            <a href="#"><img src="{% static 'svg/instagram.svg' %}" alt="Instagram"></a>
+            <a href="#"><img src="{% static 'svg/twitter.svg' %}" alt="Twitter"></a>
+            <a href="#"><img src="{% static 'svg/tiktok.svg' %}" alt="TikTok"></a>
+        </div>
+        <p>&copy; {% now "Y" %} ClubHub. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 

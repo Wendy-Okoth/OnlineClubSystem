@@ -6,19 +6,89 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h2>ClubHub</h2>
+        </div>
+        <div class="nav-right">
+            <a href="{% url 'dashboard' %}">Home</a>
+            <a href="{% url 'club_list' %}">Browse Clubs</a>
+            <a href="{% url 'recent_clubs' %}">Recently Joined</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </nav>
+
     <div class="club-container">
         <h2>{{ club.name }}</h2>
         <p>{{ club.description }}</p>
 
-        <!-- Feedback messages -->
-        {% if messages %}
-            <div class="messages">
-                {% for message in messages %}
-                    <p class="{{ message.tags }}">{{ message }}</p>
-                {% endfor %}
+        <!-- External samples -->
+        {% if club.media_type == "book" %}
+            <h3>Sample Books</h3>
+            <div class="card-grid">
+                {% if club.sample_title_1 %}
+                <div class="card">
+                    {% if club.sample_image_1 %}
+                        <img src="{{ club.sample_image_1.url }}" alt="{{ club.sample_title_1 }}" class="sample-img">
+                    {% endif %}
+                    <h4>{{ club.sample_title_1 }}</h4>
+                    <p><strong>{{ club.sample_author_director_1 }}</strong></p>
+                    <p>{{ club.sample_description_1 }}</p>
+                    {% if club.sample_link_1 %}
+                        <a href="{{ club.sample_link_1 }}" target="_blank" class="btn">View Book</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if club.sample_title_2 %}
+                <div class="card">
+                    {% if club.sample_image_2 %}
+                        <img src="{{ club.sample_image_2.url }}" alt="{{ club.sample_title_2 }}" class="sample-img">
+                    {% endif %}
+                    <h4>{{ club.sample_title_2 }}</h4>
+                    <p><strong>{{ club.sample_author_director_2 }}</strong></p>
+                    <p>{{ club.sample_description_2 }}</p>
+                    {% if club.sample_link_2 %}
+                        <a href="{{ club.sample_link_2 }}" target="_blank" class="btn">View Book</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        {% elif club.media_type == "movie" %}
+            <h3>Sample Movies</h3>
+            <div class="card-grid">
+                {% if club.sample_title_1 %}
+                <div class="card">
+                    {% if club.sample_image_1 %}
+                        <img src="{{ club.sample_image_1.url }}" alt="{{ club.sample_title_1 }}" class="sample-img">
+                    {% endif %}
+                    <h4>{{ club.sample_title_1 }}</h4>
+                    <p><strong>{{ club.sample_author_director_1 }}</strong></p>
+                    <p>{{ club.sample_description_1 }}</p>
+                    {% if club.sample_link_1 %}
+                        <a href="{{ club.sample_link_1 }}" target="_blank" class="btn">View Movie</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if club.sample_title_2 %}
+                <div class="card">
+                    {% if club.sample_image_2 %}
+                        <img src="{{ club.sample_image_2.url }}" alt="{{ club.sample_title_2 }}" class="sample-img">
+                    {% endif %}
+                    <h4>{{ club.sample_title_2 }}</h4>
+                    <p><strong>{{ club.sample_author_director_2 }}</strong></p>
+                    <p>{{ club.sample_description_2 }}</p>
+                    {% if club.sample_link_2 %}
+                        <a href="{{ club.sample_link_2 }}" target="_blank" class="btn">View Movie</a>
+                    {% endif %}
+                </div>
+                {% endif %}
             </div>
         {% endif %}
 
+        <!-- Membership logic -->
         {% if user.is_authenticated %}
             {% if user in club.members.all %}
                 <form method="post">
@@ -44,7 +114,22 @@
             <p><a href="{% url 'login' %}">Login</a> to join this club.</p>
         {% endif %}
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with us:</p>
+        <div class="social-icons">
+            <a href="#"><img src="{% static 'svg/instagram.svg' %}" alt="Instagram"></a>
+            <a href="#"><img src="{% static 'svg/twitter.svg' %}" alt="Twitter"></a>
+            <a href="#"><img src="{% static 'svg/tiktok.svg' %}" alt="TikTok"></a>
+        </div>
+        <p>&copy; {% now "Y" %} ClubHub. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
+
+
+
 
 
