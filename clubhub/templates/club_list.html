@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-     <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="nav-left">
             <h2>ClubHub</h2>
         </div>
@@ -20,6 +21,7 @@
 
     <div class="container">
         <h2>All Clubs</h2>
+
         <div class="card-grid">
             {% for club in clubs %}
                 <div class="card">
@@ -33,9 +35,13 @@
                         <a href="{% url 'club_detail' club.id %}" class="btn">View</a>
                     </div>
                 </div>
+            {% empty %}
+                <p>No clubs available.</p>
             {% endfor %}
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
         <p>Connect with us:</p>
         <div class="social-icons">
@@ -47,5 +53,8 @@
     </footer>
 </body>
 </html>
+
+
+
 
 

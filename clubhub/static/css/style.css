@@ -446,6 +446,36 @@ form textarea {
     display: block;
     margin: 0 auto;
 }
+.messages {
+    text-align: center;       /* center the text */
+    margin: 20px auto;
+    max-width: 600px;         /* keep them neat */
+}
+
+.alert {
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;              /* white text */
+}
+
+/* Color coding by type */
+.alert.success {
+    background-color: #4CAF50; /* green */
+}
+
+.alert.error {
+    background-color: #f44336; /* red */
+}
+
+.alert.warning {
+    background-color: #ff9800; /* orange */
+}
+
+.alert.info {
+    background-color: #2196F3; /* blue */
+}
 
 
 

@@ -23,21 +23,24 @@ def club_list(request):
     clubs = Club.objects.all()
     return render(request, "club_list.html", {"clubs": clubs})
 
-@login_required 
-def club_detail(request, club_id): 
-    club = get_object_or_404(Club, id=club_id) 
-    # Handle join/leave actions 
-    if request.method == "POST": 
-        if "join" in request.POST: # enforce max 8 clubs per user 
-            if request.user.clubs.count() >= 8: 
-                messages.error(request, "You can only join a maximum of 8 clubs.") 
+@login_required
+def club_detail(request, club_id):
+    club = get_object_or_404(Club, id=club_id)
+
+    if request.method == "POST":
+        if "join" in request.POST:
+            if request.user.clubs.count() >= 8:
+                messages.error(request, "You can only join a maximum of 8 clubs.")
             else:
-                club.members.add(request.user) 
-                messages.success(request, f"You joined {club.name}!") 
-        elif "leave" in request.POST: 
-            club.members.remove(request.user)
-            messages.info(request, f"You left {club.name}.")
-        return redirect("club_detail", club_id=club.id) 
+                club.members.add(request.user)
+                messages.success(request, f"You joined {club.name}!")
+        elif "request_leave" in request.POST:
+            # Instead of removing, notify admin
+            messages.info(request, "Your request to leave has been sent to the admin.")
+            # Here you could extend: send an email to admin, or log a request in DB
+
+        return redirect("club_detail", club_id=club.id)
+
     return render(request, "club_detail.html", {"club": club})
 
 @login_required
