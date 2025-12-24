@@ -1,0 +1,386 @@
+[
+{
+  "model": "clubs.club",
+  "pk": 1,
+  "fields": {
+    "name": "RomanceBookClub",
+    "media_type": "book",
+    "genre": 1,
+    "description": "A welcoming space for readers who love stories of love, passion, and heartfelt connections. Members explore timeless classics and modern romance novels across diverse sub-genres, share reviews, and discuss themes of relationships, emotions, and personal growth. It’s a community built on celebrating the joy of romantic storytelling and connecting with others who appreciate the genre.",
+    "sample_title_1": "Pride and Prejudice",
+    "sample_author_director_1": "Jane Austen.",
+    "sample_description_1": "Witty romance between Elizabeth and Darcy.",
+    "sample_image_1": "club_samples/Screenshot_20251223_225244_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/1885.Pride_and_Prejudice",
+    "sample_title_2": "Outlander",
+    "sample_author_director_2": "Diana Gabaldon.",
+    "sample_description_2": "WWII nurse time-travels to Scotland.",
+    "sample_image_2": "club_samples/Screenshot_20251223_225307_Google_1.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/10964.Outlander",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 2,
+  "fields": {
+    "name": "RomanceMovieClub",
+    "media_type": "movie",
+    "genre": 2,
+    "description": "A community for film lovers who enjoy stories of love, passion, and emotional connection. Members watch and discuss classic and contemporary romance films across diverse cultures and styles, share reviews, and explore themes of relationships, heartache, and joy. It’s a welcoming space to celebrate the art of romantic storytelling on screen and connect with others who appreciate the genre.",
+    "sample_title_1": "Titanic",
+    "sample_author_director_1": "James Cameron",
+    "sample_description_1": "Romance aboard doomed ship",
+    "sample_image_1": "club_samples/Screenshot_20251223_225358_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0120338/",
+    "sample_title_2": "The Notebook",
+    "sample_author_director_2": "Nick Cassavetes",
+    "sample_description_2": "Love story spanning decades",
+    "sample_image_2": "club_samples/Screenshot_20251223_225337_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0332280/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 3,
+  "fields": {
+    "name": "ComedyBookClub",
+    "media_type": "book",
+    "genre": 3,
+    "description": "A cheerful space for readers who enjoy witty novels, humorous essays, and lighthearted storytelling. Members share reviews and discuss how authors use humor to explore everyday life and human quirks.",
+    "sample_title_1": "Catch-22",
+    "sample_author_director_1": "Joseph Heller.",
+    "sample_description_1": "Satirical WWII bureaucracy.",
+    "sample_image_1": "club_samples/Screenshot_20251223_224644_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/4610.Catch_22",
+    "sample_title_2": "Born a Crime",
+    "sample_author_director_2": "Trevor Noah.",
+    "sample_description_2": "Memoir of growing up in apartheid South Africa.",
+    "sample_image_2": "club_samples/Screenshot_20251223_224523_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/29780253-born-a-crime",
+    "members": [
+      2
+    ]
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 4,
+  "fields": {
+    "name": "ComedyMovieClub",
+    "media_type": "movie",
+    "genre": 4,
+    "description": "A lively community for fans of comedy films. Members watch and review classics and modern comedies, exploring satire, parody, and performances that spark laughter and joy.",
+    "sample_title_1": "Airplane!",
+    "sample_author_director_1": "Jim Abrahams, Zucker Bros",
+    "sample_description_1": "Spoof of disaster films.",
+    "sample_image_1": "club_samples/Screenshot_20251223_224704_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0080339/",
+    "sample_title_2": "Monty Python and the Holy Grail",
+    "sample_author_director_2": "Terry Gilliam, Terry Jones",
+    "sample_description_2": "Parody of Arthurian legend.",
+    "sample_image_2": "club_samples/Screenshot_20251223_224727_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0071853/",
+    "members": [
+      2
+    ]
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 5,
+  "fields": {
+    "name": "Sci-FiBookClub",
+    "media_type": "book",
+    "genre": 5,
+    "description": "A hub for readers fascinated by futuristic worlds, advanced technology, and imaginative storytelling. Members share reviews and theories about space travel, artificial intelligence, and alternate realities.",
+    "sample_title_1": "Dune",
+    "sample_author_director_1": "Frank Herbert.",
+    "sample_description_1": "Desert planet sparks political intrigue",
+    "sample_image_1": "club_samples/Screenshot_20251223_224158_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/44767458-dune",
+    "sample_title_2": "Neuromancer",
+    "sample_author_director_2": "William Gibson",
+    "sample_description_2": "Hacker in cyberspace mission",
+    "sample_image_2": "club_samples/Screenshot_20251223_224232_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/22328.Neuromancer",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 6,
+  "fields": {
+    "name": "Sci-FiMovieClub",
+    "media_type": "movie",
+    "genre": 6,
+    "description": "A community for film lovers who enjoy science fiction cinema. Members watch and discuss sci-fi films that explore innovation, dystopias, and the limitless possibilities of the future.",
+    "sample_title_1": "The Matrix",
+    "sample_author_director_1": "Wachowskis",
+    "sample_description_1": "Hacker discovers reality is simulation.",
+    "sample_image_1": "club_samples/Screenshot_20251223_224331_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0133093/",
+    "sample_title_2": "Star Wars: A New Hope",
+    "sample_author_director_2": "George Lucas",
+    "sample_description_2": "Rebels fight the Empire.",
+    "sample_image_2": "club_samples/Screenshot_20251223_224309_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0076759/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 7,
+  "fields": {
+    "name": "DramaBookClub",
+    "media_type": "book",
+    "genre": 7,
+    "description": "A thoughtful space for readers who appreciate emotional depth and human struggles. Members explore novels that highlight relationships, conflict, and resilience, sharing reviews and reflections.",
+    "sample_title_1": "Hamlet",
+    "sample_author_director_1": "William Shakespeare",
+    "sample_description_1": "Prince seeks revenge",
+    "sample_image_1": "club_samples/Screenshot_20251223_224006_Google_1.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/1420.Hamlet",
+    "sample_title_2": "One Flew Over the Cuckoo’s Nest",
+    "sample_author_director_2": "Ken Kesey.",
+    "sample_description_2": "Man rebels in mental institution",
+    "sample_image_2": "club_samples/Screenshot_20251223_224032_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/332613.One_Flew_Over_the_Cuckoo_s_Nest",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 8,
+  "fields": {
+    "name": "DramaMovieClub",
+    "media_type": "movie",
+    "genre": 8,
+    "description": "A community for fans of dramatic films. Members watch and discuss powerful performances and narratives that explore human emotions, challenges, and triumphs.",
+    "sample_title_1": "The Shawshank Redemption",
+    "sample_author_director_1": "Frank Darabont",
+    "sample_description_1": "Two imprisoned men bond.",
+    "sample_image_1": "club_samples/Screenshot_20251223_224100_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0111161/",
+    "sample_title_2": "Forrest Gump",
+    "sample_author_director_2": "Robert Zemeckis",
+    "sample_description_2": "Man’s extraordinary life journey.",
+    "sample_image_2": "club_samples/Screenshot_20251223_224124_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0109830/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 9,
+  "fields": {
+    "name": "FictionBookClub",
+    "media_type": "book",
+    "genre": 9,
+    "description": "A creative space for lovers of imaginative storytelling. Members explore diverse fictional worlds, from magical realms to everyday tales, sharing reviews and insights into characters and plots.",
+    "sample_title_1": "1984",
+    "sample_author_director_1": "George Orwell.",
+    "sample_description_1": "Dystopian surveillance society.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223842_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/40961427-1984",
+    "sample_title_2": "To Kill a Mockingbird",
+    "sample_author_director_2": "Harper Lee.",
+    "sample_description_2": "Child witnesses racial injustice.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223808_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 10,
+  "fields": {
+    "name": "FictionMovieClub",
+    "media_type": "movie",
+    "genre": 10,
+    "description": "A community for fans of fictional cinema. Members watch and discuss films that bring imaginative stories to life, exploring themes that inspire and entertain.",
+    "sample_title_1": "Blade Runner",
+    "sample_author_director_1": "Ridley Scott",
+    "sample_description_1": "Detective hunts rogue androids",
+    "sample_image_1": "club_samples/Screenshot_20251223_223929_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0083658/",
+    "sample_title_2": "2001: A Space Odyssey",
+    "sample_author_director_2": "Stanley Kubrick",
+    "sample_description_2": "Journey into space and evolution",
+    "sample_image_2": "club_samples/Screenshot_20251223_223906_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0062622/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 11,
+  "fields": {
+    "name": "HorrorBookClub",
+    "media_type": "book",
+    "genre": 11,
+    "description": "A thrilling space for readers who enjoy eerie and spine-chilling tales. Members share reviews of horror novels that explore suspense, supernatural elements, and psychological fear.",
+    "sample_title_1": "The Shining",
+    "sample_author_director_1": "Stephen King",
+    "sample_description_1": "Family trapped in haunted hotel",
+    "sample_image_1": "club_samples/Screenshot_20251223_223608_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/11588.The_Shining",
+    "sample_title_2": "Dracula",
+    "sample_author_director_2": "Bram Stoker.",
+    "sample_description_2": "Classic vampire tale.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223647_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/17245.Dracula",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 12,
+  "fields": {
+    "name": "HorrorMovieClub",
+    "media_type": "movie",
+    "genre": 12,
+    "description": "A community for fans of horror films. Members watch and discuss chilling stories, exploring how directors use suspense and atmosphere to create fear.",
+    "sample_title_1": "The Exorcist",
+    "sample_author_director_1": "William Friedkin",
+    "sample_description_1": "Girl possessed by demon.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223715_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0070047/",
+    "sample_title_2": "Get Out",
+    "sample_author_director_2": "Jordan Peele",
+    "sample_description_2": "Man uncovers disturbing secrets.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223738_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt5052448/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 13,
+  "fields": {
+    "name": "BiographyBookClub",
+    "media_type": "book",
+    "genre": 13,
+    "description": "A reflective space for readers fascinated by real lives and achievements. Members read biographies of influential figures, sharing reviews and discussions about their journeys and contributions.",
+    "sample_title_1": "Educated",
+    "sample_author_director_1": "Tara Westover",
+    "sample_description_1": "Memoir of survivalist upbringing.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223401_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/35133922-educated",
+    "sample_title_2": "The Diary of a Young Girl",
+    "sample_author_director_2": "Anne Frank",
+    "sample_description_2": "WWII diary of a Jewish girl",
+    "sample_image_2": "club_samples/Screenshot_20251223_223435_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/48855.The_Diary_of_a_Young_Girl",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 14,
+  "fields": {
+    "name": "BiographyMovieClub",
+    "media_type": "movie",
+    "genre": 14,
+    "description": "A community for fans of biographical films. Members watch and discuss movies that portray the lives of famous people, exploring their challenges, triumphs, and impact.",
+    "sample_title_1": "Oppenheimer",
+    "sample_author_director_1": "Christopher Nolan",
+    "sample_description_1": "Father of atomic bomb",
+    "sample_image_1": "club_samples/Screenshot_20251223_223459_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt15398776/",
+    "sample_title_2": "Schindler’s List",
+    "sample_author_director_2": "Steven Spielberg",
+    "sample_description_2": "Businessman saves Jews.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223525_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0108052/",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 15,
+  "fields": {
+    "name": "ThrillerBookClub",
+    "media_type": "book",
+    "genre": 15,
+    "description": "An adrenaline-filled space for readers who love suspenseful novels. Members share reviews of gripping thrillers with plot twists, mysteries, and edge-of-your-seat storytelling.",
+    "sample_title_1": "Gone Girl",
+    "sample_author_director_1": "Gillian Flynn",
+    "sample_description_1": "Wife disappears, husband suspected.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223234_Google.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/19288043-gone-girl",
+    "sample_title_2": "The Da Vinci Code",
+    "sample_author_director_2": "Dan Brown",
+    "sample_description_2": "Symbologist uncovers hidden secrets.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223146_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/968.The_Da_Vinci_Code",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 16,
+  "fields": {
+    "name": "ThrillerMovieClub",
+    "media_type": "movie",
+    "genre": 16,
+    "description": "A community for fans of thriller films. Members watch and discuss fast-paced movies full of suspense, unexpected turns, and gripping narratives.",
+    "sample_title_1": "Se7en",
+    "sample_author_director_1": "David Fincher",
+    "sample_description_1": "Detectives hunt a killer using deadly sins.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223334_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt0114369/",
+    "sample_title_2": "Psycho",
+    "sample_author_director_2": "Alfred Hitchcock",
+    "sample_description_2": "Motel owner hides dark secrets.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223308_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0054215/",
+    "members": [
+      2
+    ]
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 17,
+  "fields": {
+    "name": "MysteryBookClub",
+    "media_type": "book",
+    "genre": 17,
+    "description": "A curious space for readers who love solving puzzles and uncovering secrets. Members enjoy mystery novels, sharing reviews and theories about detectives, clues, and revelations.",
+    "sample_title_1": "And Then There Were None",
+    "sample_author_director_1": "Agatha Christie",
+    "sample_description_1": "Ten strangers trapped on an island.",
+    "sample_image_1": "club_samples/Screenshot_20251223_222922_Chrome.jpg",
+    "sample_link_1": "https://www.goodreads.com/book/show/16299.And_Then_There_Were_None",
+    "sample_title_2": "The Hound of the Baskervilles",
+    "sample_author_director_2": "Arthur Conan Doyle",
+    "sample_description_2": "Sherlock Holmes investigates a deadly curse",
+    "sample_image_2": "club_samples/Screenshot_20251223_223005_Google.jpg",
+    "sample_link_2": "https://www.goodreads.com/book/show/8921.The_Hound_of_the_Baskervilles",
+    "members": []
+  }
+},
+{
+  "model": "clubs.club",
+  "pk": 18,
+  "fields": {
+    "name": "MysteryMovieClub",
+    "media_type": "movie",
+    "genre": 18,
+    "description": "A community for fans of mystery films. Members watch and discuss movies filled with intrigue, suspense, and clever storytelling that keeps audiences guessing.",
+    "sample_title_1": "Knives Out",
+    "sample_author_director_1": "Rian Johnson",
+    "sample_description_1": "A Detective investigates family murder.",
+    "sample_image_1": "club_samples/Screenshot_20251223_223024_Google.jpg",
+    "sample_link_1": "https://www.imdb.com/title/tt8946378/",
+    "sample_title_2": "Rear Window",
+    "sample_author_director_2": "Alfred Hitchcock",
+    "sample_description_2": "Photographer suspects neighbor of murder.",
+    "sample_image_2": "club_samples/Screenshot_20251223_223108_Google.jpg",
+    "sample_link_2": "https://www.imdb.com/title/tt0047396/",
+    "members": []
+  }
+}
+]
