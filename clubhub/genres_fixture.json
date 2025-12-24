@@ -1,0 +1,146 @@
+[
+{
+  "model": "clubs.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Romance",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Romance",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Comedy",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Comedy",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Sci-Fi",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Sci-Fi",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Drama",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Drama",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Fiction",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Fiction",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Horror",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Horror",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Biography",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Biography",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 15,
+  "fields": {
+    "name": "Thriller",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 16,
+  "fields": {
+    "name": "Thriller",
+    "media_type": "movie"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 17,
+  "fields": {
+    "name": "Mystery",
+    "media_type": "book"
+  }
+},
+{
+  "model": "clubs.genre",
+  "pk": 18,
+  "fields": {
+    "name": "Mystery",
+    "media_type": "movie"
+  }
+}
+]
