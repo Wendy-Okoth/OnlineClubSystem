@@ -56,9 +56,14 @@ class Review(models.Model):
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
-
 class Feedback(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    club = models.ForeignKey(Club, on_delete=models.CASCADE)
-    body = models.TextField()
+    club = models.ForeignKey("Club", on_delete=models.CASCADE, related_name="feedbacks")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.club.name}"
+
+
+

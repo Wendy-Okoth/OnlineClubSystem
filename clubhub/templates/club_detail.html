@@ -9,7 +9,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-left">
-            <h2>ClubHub</h2>
+            <h2>StoryHub</h2>
         </div>
         <div class="nav-right">
             <a href="{% url 'dashboard' %}">Home</a>
@@ -96,7 +96,23 @@
         {% else %}
             <p><a href="{% url 'login' %}">Login</a> to join this club.</p>
         {% endif %}
-    </div>
+    
+    <h3>Give Feedback</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ feedback_form.as_p }}
+    <button type="submit" name="feedback">Submit Feedback</button>
+</form>
+
+<h3>Feedback from Members</h3>
+<ul>
+    {% for fb in club.feedbacks.all %}
+        <li><strong>{{ fb.user.username }}:</strong> {{ fb.message }} ({{ fb.created_at|date:"M d, Y H:i" }})</li>
+    {% empty %}
+        <li>No feedback yet.</li>
+    {% endfor %}
+</ul>
+</div>
 
     <!-- Footer -->
     <footer>

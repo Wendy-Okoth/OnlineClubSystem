@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect , get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
-from .models import Club
+from .models import Club ,Feedback
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from django.contrib import messages
+from .forms import FeedbackForm
 
 def homepage(request):
     return render(request, "homepage.html")
@@ -26,6 +27,7 @@ def club_list(request):
 @login_required
 def club_detail(request, club_id):
     club = get_object_or_404(Club, id=club_id)
+    feedback_form = FeedbackForm()   # blank form by default
 
     if request.method == "POST":
         if "join" in request.POST:
@@ -34,14 +36,32 @@ def club_detail(request, club_id):
             else:
                 club.members.add(request.user)
                 messages.success(request, f"You joined {club.name}!")
+
         elif "request_leave" in request.POST:
             # Instead of removing, notify admin
             messages.info(request, "Your request to leave has been sent to the admin.")
-            # Here you could extend: send an email to admin, or log a request in DB
+            # Extend here: send email to admin or log request in DB
+
+        elif "feedback" in request.POST:
+            feedback_form = FeedbackForm(request.POST)
+            if feedback_form.is_valid():
+                fb = feedback_form.save(commit=False)
+                fb.club = club
+                fb.user = request.user
+                fb.save()
+                messages.success(request, "Your feedback has been submitted!")
 
         return redirect("club_detail", club_id=club.id)
 
-    return render(request, "club_detail.html", {"club": club})
+    return render(
+        request,
+        "club_detail.html",
+        {
+            "club": club,
+            "feedback_form": feedback_form,
+        },
+    )
+
 
 @login_required
 def dashboard(request):
